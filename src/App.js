@@ -1,8 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import './App.css';
 import Editor from './Editor.js';
 import Preview from './Preview.js';
-import marked from 'marked';
 
 function App() {
   const [rawInput, setInput] = useState("");
