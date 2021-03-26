@@ -1,23 +1,22 @@
-import logo from './logo.svg';
+import React, { useState, useEffect } from 'react';
 import './App.css';
+import Editor from './Editor.js';
+import Preview from './Preview.js';
+import marked from 'marked';
 
 function App() {
+  const [rawInput, setInput] = useState("");
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Prueba prueba 2
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="App row" id="wrapper">
+      <div className="col editor">
+        Editor<br/>
+      <Editor setInput={setInput}/>
+      </div>
+      <div className="col">
+        Preview
+      <Preview rawInput={rawInput}/>
+      </div>
     </div>
   );
 }
