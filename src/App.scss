@@ -33,7 +33,7 @@ $black: #1C1A1B;
 #preview::after {
   content:"";
   opacity: 0.3;
-  background-image: url("hi.webp");
+  background-image: url("hi.png");
   background-repeat: no-repeat;
   background-size: 250px;
   background-position: bottom right;
@@ -49,9 +49,23 @@ $black: #1C1A1B;
   font-size: 0.6em;
   min-width:45vw;
   min-height:80vh;
-  color: $darkcolor;
-  background-color: $bgcolor
+  color: $black;
+  background-color: white;
+  background-image: url("peeking.png");
+  background-repeat: no-repeat;
+  background-size: 150px;
+  background-position: center right;
+  border: 2px dashed $darkcolor;
+  border-radius: 15px;
 }
+#editor::-webkit-scrollbar{
+  display:none;
+}
+#editor:focus{
+  outline:none;
+  background-color: $bgcolor;
+}
+
 #preview {
   blockquote {
     border-left: 3px solid $darkcolor;
