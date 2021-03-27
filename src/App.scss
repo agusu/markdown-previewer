@@ -1,0 +1,92 @@
+$bgcolor: #F2F9F9;
+$lightcolor: #83C2BE;
+$darkcolor: #45939E;
+$darkgray: #515459;
+$lightpink: #EEE5E3;
+$black: #1C1A1B;
+@import url('https://fonts.googleapis.com/css2?family=Oxanium:wght@400;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+#wrapper {
+  font-weight: bold;
+  font-size: 1.5em;
+  color: $darkcolor;
+  font-family: Oxanium,sans-serif;
+  
+
+  #preview, #editor {
+    font-family: Roboto, sans-serif;
+    font-size: 0.6em;
+    font-weight: 400;
+  }
+#preview {
+  min-height: 60vh;
+  width: 45vw;
+  border: 2px solid $lightcolor;
+  border-radius: 15px;
+  padding-left: 5px;
+  text-align:left;
+  color:$black;
+  background-color: $bgcolor;
+  display: block;
+  position: relative;
+  z-index:1;
+}
+#preview::after {
+  content:"";
+  opacity: 0.3;
+  background-image: url("hi.webp");
+  background-repeat: no-repeat;
+  background-size: 250px;
+  background-position: bottom right;
+  top: 0;
+  left: 0;
+  bottom: 0px;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+}
+
+#editor {
+  font-size: 0.6em;
+  min-width:45vw;
+  min-height:80vh;
+  color: $darkcolor;
+  background-color: $bgcolor
+}
+#preview {
+  blockquote {
+    border-left: 3px solid $darkcolor;
+    color: #224b4b;
+    padding-left: 5px;
+    margin-left: 25px;
+  }
+
+  code {
+    background: white;
+    color: $darkcolor;
+    padding: 1px 4px 2px 4px;
+    font-weight: bold;
+    display:inline-block;
+  }
+  a {
+    color: $lightcolor;
+  }
+  li::marker{
+    color: $darkgray;
+  }
+
+  h1 {
+    color: $darkcolor;
+  }
+
+  h2, h3, h4, h5, h6 {
+    color:$black;
+  }
+
+  td,
+  th {
+    border: 2px solid $lightcolor;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+}
+}
